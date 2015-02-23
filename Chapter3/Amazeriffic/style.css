@@ -1,5 +1,5 @@
 body {
-  background: #f9e933;
+  background: #606060;
 }
 
 header, main, footer {
@@ -19,6 +19,7 @@ header {
 header h1 {
   float: left;
   width: 570px;
+  color: #0000CC;
 }
 
 header nav {
@@ -41,6 +42,23 @@ main .right {
   width: 285px;
 }
 
+main h2 {
+  color: #000099;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+main li {
+  font-size: 1.3em;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  color: #000099;
+}
+
+main p {
+  font-size: 1.1em;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  color: #006666;
+}
+
 footer .left {
   float: left;
   width: 570px;
@@ -49,4 +67,8 @@ footer .left {
 footer .sitemap {
   float: right;
   width: 285px;
+}
+
+footer a {
+  color: #000;
 }
