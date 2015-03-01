@@ -58,6 +58,10 @@ main p {
   font-family: Calibri, Arial, Helvetica, sans-serif;
   color: #006666;
 }
+main li.c1 {
+  list-style: none; 
+  display: inline;
+}
 
 footer .left {
   float: left;
