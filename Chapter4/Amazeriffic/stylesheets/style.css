@@ -129,8 +129,10 @@ li {
 
 footer .sitemap .left {
     float: left;
+    width: 50%;
 }
 
 footer .sitemap .right {
     float: right;
+    width: 50%;
 }

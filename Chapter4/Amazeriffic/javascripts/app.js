@@ -1,4 +1,6 @@
+/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
 var main = function () {
+    "use strict";
     var toDos = ["Get groceries",
                  "Make up some new ToDos",
                  "Prep for Monday's class",
@@ -35,7 +37,7 @@ var main = function () {
                 });
             } else if ($element.parent().is(":nth-child(3)")) {
                 // input a new to-do
-                $input = $("<input>"),
+                $input = $("<input>");
                 $button = $("<button>").text("+");
 
                 $button.on("click", function () {
@@ -48,10 +50,18 @@ var main = function () {
                 $content = $("<div>").append($input).append($button);
                /* Alternatively append() allows multiple arguments so the above
                 can be done with $content = $("<div>").append($input, $button); */
+            } else if ($element.parent().is(":nth-child(4)")) {
+                $content = $("<div>");
+                for(i = 1; i <= 4; i = i+1) {
+                    $content.append("<p><a class='gallery' href='images/" + i + ".jpg'>Photo_" + i + "</a></p>");
+                }                
             }
 
             $("main .content").append($content);
-
+            if ($element.parent().is(":nth-child(4)")) {
+                $("a.gallery").colorbox({rel:"gallery" });    
+            }
+            
             return false;
         });
     });
