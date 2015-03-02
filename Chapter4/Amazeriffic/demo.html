@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheets/colorbox.css">
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="javascripts/jquery.colorbox.js"></script>
+    </head>
+    <body>
+        <p><a class='gallery' href='images/1.jpg'>Photo_1</a></p>
+        <p><a class='gallery' href='images/2.jpg'>Photo_2</a></p>
+        <p><a class='gallery' href='images/3.jpg'>Photo_3</a></p>
+        <p><a class='gallery' href='images/4.jpg'>Photo_4</a></p>
+        <script>
+            $(document).ready(function(){
+                $('a.gallery').colorbox({rel:'group1' });
+            });
+        </script>
+    </body>
+</html>
