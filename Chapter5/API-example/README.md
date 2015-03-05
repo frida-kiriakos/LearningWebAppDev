@@ -1,6 +1,7 @@
 1- team project description: we will create a community for allowing users to post to twitter as a group, when a user posts an update, the other members of the group will need to review it and vote on it, if it gets the required number of upvotes, it will be published to twitter.
 
 2 + 3 - The list of API’s that might be useful for us and how its functionality can be used in our project:
+	
 	1- Twitter API to post the updates on twitter and to retrieve the list of tweets that the group posts, we can also use Twitter login functionality to manage users account.
 
 	2- Babbl.me: it is an API that formats the posts, specially long ones, to convert them into twitter-sized posts, this can be useful in our project if the user needs to post an update that is longer than 140 characters.
@@ -16,3 +17,5 @@
 7- Since it is a simple API to use, I would recommend using because it makes it easier for us to generate user profiles.
 
 8- The API generates a lot of information for a user, even a username and password, which can be useful when testing login on the website, I have used a few attributes that it generates and more comprehensible profiles can be created by using this API.
+
+Note: the screenshots for my page in action can be found under the images directory
