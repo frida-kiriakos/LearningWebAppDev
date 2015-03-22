@@ -3,7 +3,6 @@
 
 "use strict";
 var express = require("express"),
-    bodyParser = require("body-parser"),
     http = require("http"),
     app = express();
 
@@ -94,7 +93,7 @@ app.post("/play/:user_choice", function (req, res) {
         res.json(resp);
 
     } else {
-        console.log("Error: invalid request")
+        console.log("Error: invalid request");
         res.json("error");
     }
     
