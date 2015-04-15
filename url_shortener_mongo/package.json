@@ -1,0 +1,11 @@
+{
+  "name": "url_shortener",
+  "dependencies": {
+    "express": "~4.12.2",
+    "redis": "~0.12.1",
+    "bases": "~0.2.1",
+    "body-parser": "~1.12.0",
+    "mongoose": "~3.8.0"
+
+  }
+}
