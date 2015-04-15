@@ -33,9 +33,7 @@ var next_key;
 Key.findOne({name: "next"}, {value: 1, _id: 0}).exec(function(err, key) {
 	if (err) {
 		console.log("an error occurred: " + err);
-	} else if (key) {
-		// doing nothing
-	} else {
+	} else if (!key) {
 		next_key = new Key({name: "next", value: 10*Math.pow(36,3)});
 		next_key.save();
 	}
@@ -87,11 +85,13 @@ app.post("/shorten", function(req,res) {
 				// the url is a new one, shorten it
 				inc = Math.floor(Math.random()*10);
 
-				Key.findOne({name: "next"}, {value: 1, _id: 0}).exec(function(err, key) {
+				Key.findOne({name: "next"}).exec(function(err, key) {
 					if (err) {
 						console.log("an error occurred: " + err);
 					} else {
-						new_key = bases.toBase36(key.value + inc);
+						key.value += inc;
+						key.save();
+						new_key = bases.toBase36(key.value);
 						output_url = base_url + new_key;
 						new_url = new Url({long_url: input_url, short_url: output_url, hits: 0});
 						new_url.save();
