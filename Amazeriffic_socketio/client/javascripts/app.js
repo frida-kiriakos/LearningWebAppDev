@@ -1,7 +1,4 @@
-var handleTags = function(toDoObjects) {
-
-}
-
+/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
 var main = function (toDoObjects) {
     "use strict";
     console.log("SANITY CHECK");
@@ -115,11 +112,11 @@ var main = function (toDoObjects) {
                 });
 
             } else if ($element.parent().is(":nth-child(4)")) {
-                var $input = $("<input>").addClass("description"),
-                    $inputLabel = $("<p>").text("Description: "),
+                var $inputLabel = $("<p>").text("Description: "),
                     $tagInput = $("<input>").addClass("tags"),
-                    $tagLabel = $("<p>").text("Tags: "),
-                    $button = $("<span>").text("+");
+                    $tagLabel = $("<p>").text("Tags: ");
+                $input = $("<input>").addClass("description");
+                $button = $("<span>").text("+");
 
                 $button.on("click", function () {
                     var description = $input.val(),
@@ -160,7 +157,9 @@ var main = function (toDoObjects) {
 };
 
 $(document).ready(function () {
+    "use strict";
     $.getJSON("todos.json", function (toDoObjects) {
         main(toDoObjects);
     });
+    // listen on the event and call main again
 });

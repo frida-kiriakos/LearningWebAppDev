@@ -5,10 +5,10 @@ var express = require("express"),
     http = require("http"),
     // import the mongoose library
     mongoose = require("mongoose"),
-    app = express();
-    http = require("http");
-    server = http.createServer(app);
-    socketIO = require("socket.io");
+    app = express(),
+    http = require("http"),
+    server = http.createServer(app),
+    socketIO = require("socket.io"),
     io = socketIO(server);
 
 
@@ -16,7 +16,7 @@ app.use(express.static(__dirname + "/client"));
 app.use(express.bodyParser());
 
 // connect to the amazeriffic data store in mongo
-mongoose.connect('mongodb://localhost/amazeriffic');
+mongoose.connect("mongodb://localhost/amazeriffic");
 
 // This is our mongoose model for todos
 var ToDoSchema = mongoose.Schema({
@@ -36,7 +36,7 @@ app.post("/todos", function (req, res) {
     console.log(req.body);
     var newToDo = new ToDo({"description":req.body.description, "tags":req.body.tags});
     
-    newToDo.save(function (err, result) {
+    newToDo.save(function (err) {
 		if (err !== null) {
 		    // the element did not get saved!
 		    console.log(err);
