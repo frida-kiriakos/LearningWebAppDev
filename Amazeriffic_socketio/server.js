@@ -57,7 +57,7 @@ app.post("/todos", function (req, res) {
 
 io.sockets.on("connection", function (socket) {
 	socket.on("todo_added", function (data) {
-		console.log( "data received from client: " + data.description);
+		// console.log( "data received from client: " + data.description);
 		socket.broadcast.emit("todo_added_server", data);
 	});
 });
