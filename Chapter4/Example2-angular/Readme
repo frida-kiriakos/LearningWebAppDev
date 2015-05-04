@@ -1,0 +1,8 @@
+1- Do you find the code to be simpler when using AngularJS? If so, how? If not, why?
+It is a more elegant solution but we needed to learn AngularJS and get accustomed to it.
+
+2- Would a beginner to front-end development find the code to be simpler? Why or why not?
+Yes because we don't need to directly manipulate the DOM and to learn the javascripts method that are needed to update the DOM.
+
+3- How might the structure provided by AngularJS simplify building larger web applications?
+Because it provides a more elegant solution, it will be much simpler to build larger applications, it includes less typing and removes a lot of redundancy since the controllers and their methods can be reused in different parts of the app.
